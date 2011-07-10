@@ -1,0 +1,54 @@
+<div>
+<div style="margin-left: 102px; font-size: 135%; float:left">
+    <%= @person.first %> <%= @person.last %>
+    <br />
+    <div style="clear: both; font-size: 55%">
+	  <div style="float: left;"><%= pluralize(@person.mentees.count, "Follower") %></div>
+      <div style="float: left; margin-left: 20px;"><%= render 'users/mentor_form' if signed_in? %></div>
+      <% if signed_in? %>
+        <div style="float: left; margin-left: 30px;">
+          <%= button_to "Contribute Seed", :action => "contribute", :id => @person.id %>
+        </div>
+      <% end %>   
+    </div>
+</div>
+
+<div style="width: 350px; margin-right: 80px; float: right">
+  <p style="font-size: 75%">
+    <%= @person.description %>
+  </p>
+</div>
+</div>
+
+<div id="holder"></div>
+
+<% if (@tl_length == 0) %>
+
+<p style="margin-left: 102px; margin-top: 20px;">
+  There are no seeds here. Do you have any to contribute?
+</p>
+
+<div style="margin-left:20px;">
+  <%= render 'shared/contribute_display' %>
+</div>
+
+<% else %>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var timelineLength = <%= raw @tl_length.to_json %>;
+        var signed_in = <%= raw @signed_bool.to_json %>;
+        if(timelineLength > 0 && signed_in) {
+          $("#timeline_display").html("<section class=\"round\">" + 
+  		  							  "<%= escape_javascript(render 'shared/timeline_display') %>" + 
+  		  							  "</section>");
+  		  $("#timeline_display").show();
+  		}
+	});
+	
+</script>
+<% end %>
+
+
+
+
+

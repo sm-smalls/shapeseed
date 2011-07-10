@@ -1,0 +1,78 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td><h1>What Shaped You?</h1></td>
+	</tr>
+    <tr>
+      <td>
+        <%= render 'shared/work_form' %>
+	  </td>
+      <td class="sidebar round left">
+        <%= render 'shared/user_info' %>
+	  	<%= render 'shared/user_tags' %>
+	  </td>
+    </tr>
+  </table>
+  
+<!-- Show Timeline -->
+<script type="text/javascript">	
+    $(document).ready(function() {
+	    var timelineLength = <%= raw @tl_length.to_json %>;
+        if(timelineLength > 0) {
+  		  $("#timeline_display").show();
+  		  $("#timeline_display").html("<section class=\"round\">" + 
+  		  							  "<%= escape_javascript(render 'shared/timeline_self') %>" + 
+  		  							  "</section>");
+  		}
+	});
+</script>
+
+
+<% else %>
+    <h1 style="text-align:center;">ShapeSeed</h1>
+    
+    <p class="blurb round">
+    Throughout our lives, we are shaped by our environment, but some influences make such an 
+    indelible difference that we place them in higher regard. From the book that changed the 
+    way you view the world to the teacher that believed in you to the album that resonated in 
+    your heart, these are what made us who we are today. 
+    </p>
+    
+    <br />
+    
+    <p class="blurb round">
+    ShapeSeed's goal is to create a corpus of the resources that transform, inspire, and shape us. 
+    We think that there is great utility in this and want you to contribute to that corpus by 
+    joining and creating your very own timeline of what seeds shaped who you are today. For 
+    inspiration, take a look at <a href="www.dictionary.com">one</a> of ours. 
+    </p>
+    
+    <br />
+    
+    <div style="text-align: center;">
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign In" %>
+  </div>
+<% end %>
+
+<p><%= link_to "New User? Sign up now!", signup_path, :class => "signup_button round" %></p>
+</div>
+
+    <%#= form_for(@user) do |f| %>
+      <%#= render 'users/fields', :f => f %>
+        <div class="actions">
+          <%#= f.submit "Sign Up" %>
+        </div>
+    <%# end %>
+
+<% end %>

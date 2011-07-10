@@ -1,0 +1,12 @@
+<%= render 'shared/error_messages', :object => f.object %>
+<div class="field">
+  <%= f.text_field :first, :size => 37, :placeholder => "Your First Name" %>
+  <br /> 
+  <%= f.text_field :last, :size => 37, :placeholder => "Your Last Name" %>
+  <br /> 
+  <%= f.text_field :email, :size => 37, :placeholder => "Your Email" %>
+  <br />
+  <%= f.password_field :password, :size => 37, :placeholder => "Your Password" %>
+  <br />
+  <%= f.password_field :password_confirmation, :size => 37, :placeholder => "Confirm Password" %>
+</div>

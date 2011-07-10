@@ -1,0 +1,10 @@
+<div style="text-align: center;">
+<h1>Sign Up</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'users/fields', :f => f %>
+  <div class="actions">
+    <%= f.submit "Sign Up" %>
+  </div>
+<% end %>
+</div>

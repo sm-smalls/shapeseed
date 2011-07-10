@@ -1,0 +1,201 @@
+  <script type="text/javascript">
+        
+        $(document).ready(function() {
+			
+		    var timelineWorks = <%= raw @timeline_works_js.to_json %>;
+		    var timelineTags = <%= raw @timeline_tags_js.to_json %>;
+		    
+			if(timelineWorks != null) {
+			  var upperBorder = 20;
+			  var lowerBorder = 20;
+			  var sideBorder = 40;
+			  var boxNumber = timelineWorks.length;
+			  var holderWidth = 690;
+			  var boxWidth = holderWidth - 3*sideBorder;
+			  var boxHeight = 75;
+			  var ageTextSize = 15;
+			  var nameTextSize = 13;
+			  var contentTextSize = 16;
+			  
+			  var holderLength = (boxHeight*2)*boxNumber + upperBorder + lowerBorder;
+			
+			  var r = new Raphael("holder", holderWidth, holderLength);
+			  var boxes = r.set();
+			  var ageTexts = r.set();
+			  var line;
+			  var pathAttr = ["M", sideBorder/2, holderLength - lowerBorder - 4];
+
+			  var resetHolderLength = 0;			   
+			  for(var i = 0; i < boxNumber; i++) {
+			    if(i > 0) { //Boxes in order, going down
+			      var yCoord = resetHolderLength + boxHeight*1/3;
+				}
+				else { //Top box, the highest age
+			      var yCoord = upperBorder + lowerBorder;
+			    }
+				var xCoord = 2.5*sideBorder;
+			    var box = makeBox(yCoord, xCoord, boxNumber - i - 1);
+				boxes.push(box);
+				resetHolderLength = yCoord + box[0].height + box[1].height;
+			  }
+			  r.setSize(holderWidth, resetHolderLength + boxHeight/3);
+			  drawLine();
+			}
+			
+			
+			function makeBox(yCoord, xCoord, i) {
+			  box = r.set();
+			  var boxNameTag = r.rect(xCoord, 
+								      yCoord,
+								      boxWidth,
+								      boxHeight/4,
+								      10)
+			  var boxContent = r.rect(xCoord,
+			  						  yCoord + boxHeight/4,
+			  						  boxWidth,
+			  						  boxHeight*3/4,
+			  						  10)
+			  //CONSIDER USING PRINT *******
+			  var textNameTag = r.text(boxNameTag.getBBox().x + 5,
+			   					   	   boxNameTag.getBBox().y + boxNameTag.getBBox().height/2 + 1)
+			   						   .attr({"font-size": nameTextSize, 'text-anchor':'start', 
+								   			 stroke:"#29264d", "stroke-width":.35});
+			  var textContent = r.text(boxContent.getBBox().x + 5,
+			   						   boxContent.getBBox().y + boxContent.getBBox().height/2 + 1)
+								   	   .attr({"font-size": contentTextSize, 'text-anchor':'start', 
+								   	   stroke:"#29264d", "stroke-width":.35});
+			  writeText(timelineWorks[i].work.content, timelineWorks[i].work.name, timelineTags[i],  
+			  			boxNameTag, boxContent, 
+			  			textNameTag, textContent);
+			  boxNameTag.attr({stroke:"#87ceeb", "stroke-width":2});
+			  boxContent.attr({stroke:"#87ceeb", "stroke-width":2});
+			  textNameTag.translate(boxNameTag.getBBox().x + 5 - textNameTag.getBBox().x,
+			  						boxNameTag.getBBox().y - textNameTag.getBBox().y + 1);
+			  textContent.translate(boxContent.getBBox().x + 5 - textContent.getBBox().x,
+			  						boxContent.getBBox().y - textContent.getBBox().y + 1);
+			  			
+			  box.push(boxNameTag);
+			  box.push(boxContent);
+			  box.push(textNameTag);
+			  box.push(textContent);
+			  
+			  var ageText = r.text(sideBorder/2, 
+			  					   boxNameTag.getBBox().y + boxNameTag.getBBox().height/2, 
+			  					   timelineWorks[i].work.age).
+								   attr({"font-size": ageTextSize, stroke:"#87ceeb", "stroke-width": .5});
+			  ageTexts.push(ageText);
+			  if(i > 0 && (timelineWorks[i].work.age != timelineWorks[i-1].work.age)) {
+			    pathAttr = pathAttr.concat(["L", ageText.getBBox().x + ageText.getBBox().width/2, 
+			    								 ageText.getBBox().y + ageText.getBBox().height, 
+			  				   			    "M", ageText.getBBox().x + ageText.getBBox().width/2,
+			  				   			    	 ageText.getBBox().y]);
+			  }
+			  else if(i == 0) {
+		    	pathAttr = pathAttr.concat(["L", ageText.getBBox().x + ageText.getBBox().width/2, 
+		    									 ageText.getBBox().y + ageText.getBBox().height, 
+			  				   			    "M", ageText.getBBox().x + ageText.getBBox().width/2, 
+			  				   			    	 ageText.getBBox().y]);
+			  }
+			  else {
+			    ageText.hide();
+			  }
+			  if(i == boxNumber-1) {
+			    pathAttr = pathAttr.concat(["L", sideBorder/2, upperBorder, "z"]);
+			  }
+			  
+			  return box;
+			}	
+			
+			function drawLine() {
+			  line = r.path().attr({path: pathAttr, stroke:"#29264d", "stroke-width" : 4});
+			  var upArrow = r.path("M" + (line.getBBox().x - sideBorder/2) + 
+			  					   " " + (line.getBBox().y + sideBorder/2) + 
+			  					   "L " + (line.getBBox().x) + 
+			  					   " " + (line.getBBox().y)).
+			  					   attr({stroke:"#29264d", "stroke-width" : 4});
+			  var downArrow = r.path("M" + (line.getBBox().x + sideBorder/2) + 
+			  					   " " + (line.getBBox().y + sideBorder/2) + 
+			  					   "L " + (line.getBBox().x) + 
+			  					   " " + (line.getBBox().y)).
+			  					   attr({stroke:"#29264d", "stroke-width" : 4});
+			}
+			
+			
+			function writeText(cText, nText, tText, 
+							   nameTagBox, contentBox,
+							   nametagTextB, contentTextB) {
+			  if(cText){var contentWords = cText.split(" ");}
+			  if(nText){var nameWords = nText.split(" ");}
+			  if(tText){var tagWords = tText.split(" ");}
+			  var tempText = "";
+			  if(nText) {
+				  for (var i = 0; i < nameWords.length; i++) {
+					nametagTextB.attr("text", tempText + "" + nameWords[i]);
+					while (nametagTextB.getBBox().height > nameTagBox.getBBox().height) {
+					  nameTagBox.hide();
+					  nameTagBox = r.rect(nameTagBox.getBBox().x, 
+								      	  nameTagBox.getBBox().y,
+								          nameTagBox.getBBox().width,
+								          nametagTextB.getBBox().height + 3,
+								      	  10);
+					  nameTagBox.show();
+					}
+					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 2) {
+					  tempText += "\n" + nameWords[i];
+					} else {
+					  tempText += " " + nameWords[i];
+					}
+				  }
+				  nametagTextB.attr("text", tempText.substring(1));
+			  }
+			  if(tText) {
+			      tempText += "\t";
+				  for (var i = 0; i < tagWords.length; i++) {
+					nametagTextB.attr("text", tempText + "" + tagWords[i]);
+					while (nametagTextB.getBBox().height > nameTagBox.getBBox().height) {
+					  nameTagBox.hide();
+					  nameTagBox = r.rect(nameTagBox.getBBox().x, 
+								      	  nameTagBox.getBBox().y,
+								          nameTagBox.getBBox().width,
+								          nametagTextB.getBBox().height + 3,
+								      	  10) 
+					  nameTagBox.show();
+					}
+					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 2) {
+					  tempText += "\n" + tagWords[i];
+					} else {
+					  tempText += " | " + tagWords[i];
+					}
+				  }
+				  nametagTextB.attr("text", tempText.substring(1));
+			  }
+			  if(cText) {
+			      tempText = "";
+				  for (var i = 0; i < contentWords.length; i++) {
+					contentTextB.attr("text", tempText + "" + contentWords[i]);
+					if (contentTextB.getBBox().height > contentBox.getBBox().height) {
+					  contentBox.hide();
+					  contentBox = r.rect(contentBox.getBBox().x, 
+								      	  contentBox.getBBox().y,
+								          contentBox.getBBox().width,
+								          contentTextB.getBBox().height + 5,
+								      	  10)
+					  contentBox.show();
+					}
+					if (contentTextB.getBBox().width > contentBox.getBBox().width - 10) {
+					  tempText += "\n" + contentWords[i];
+					} else {
+					  tempText += " " + contentWords[i];
+					}
+				  }
+				  contentTextB.attr("text", tempText.substring(1));
+			  }
+			}
+			
+					
+		});
+	</script>
+  
+ 
+			  
+			      				    

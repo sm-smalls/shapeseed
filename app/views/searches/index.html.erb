@@ -1,0 +1,20 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td><%= render 'search_bar' %></td>
+      <td id="search_help" class="sidebar round right" style="text-align:center;">
+        <h3><u>Search Help</u></h3>
+        <ul>
+          <li>Find names, tags, or seeds</li>
+          <li>Ages are optional</li>
+        </ul>
+	  </td>
+    </tr>
+  </table>
+<% else %> 
+  <%= redirect_to(root_path) %>
+<% end %>
+
+
+
+

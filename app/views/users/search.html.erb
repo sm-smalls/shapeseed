@@ -1,0 +1,7 @@
+<%= render 'shared/search_bar' %>
+
+<% unless @search.empty? %>
+  <div class="results">
+    <%= render @search %>
+  </div>
+<% end %>

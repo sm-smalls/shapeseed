@@ -1,0 +1,21 @@
+<!--<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%#= @user.first_name %> <%= @user.last_name %>
+      </h1>
+      <%#= render 'follow_form' if signed_in? %>
+    </td>
+    <td class="sidebar round left">
+      <%#= render 'shared/user_info' %>
+      <%#= render 'shared/user_tags' %>
+    </td>
+  </tr>
+  
+</table>-->
+
+<h1 style="text-align: center">
+  <%= @user.first_name %> <%= @user.last_name %> <%= render 'follow_form' if signed_in? %>
+</h1>
+      
+

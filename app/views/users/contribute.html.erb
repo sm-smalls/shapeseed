@@ -1,0 +1,34 @@
+<% if signed_in? %>
+
+<%= form_for(@person) do |f| %>
+  <%= render 'shared/error_messages', :f => f%>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first, :size => 37 %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last, :size => 37 %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :size => 37 %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, :size => 37 %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id %>
+  </div>  
+  <div class="actions">
+    <%= f.submit "Contribute" %>
+  </div>
+<% end %>
+
+
+<% else %>
+
+<%= render 'users/new' %>
+
+<% end %>

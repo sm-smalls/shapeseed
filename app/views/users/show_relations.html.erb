@@ -1,0 +1,18 @@
+  <div id="relations_mentors">
+    <h1>Following</h1>
+    <% unless @mentors.empty? %>
+      <% @mentors.each do |mentor| %>
+        <a href="<%= person_path(mentor) %>"><h3><%= mentor.first %> <%= mentor.last %></h3></a>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div id="relations_contributeds">
+    <h1>Contributed</h1>
+    <% unless @contributeds.empty? %>
+      <% @contributeds.each do |contributed| %> 
+        <a href="<%= person_path(contributed) %>"><h3><%= contributed.first %> <%= contributed.last %></h3></a>
+      <% end %>
+    <% end %>
+  </div>
+   

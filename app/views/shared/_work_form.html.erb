@@ -1,0 +1,23 @@
+<%= form_for(@work) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <table>
+    	<tr>
+		  <td class="tag round"><%= f.label :content, "Description:" %></td>
+		  <td class="input"><%= f.text_area(:content, :size => "25x4") %></td>
+		</tr>
+		<tr>
+		  <td class="tag round"><%= f.label :name, "Name:" %></td> 
+		  <td class="input"><%= f.text_field :name %></td>
+		</tr>
+		<tr>
+		  <td class="tag round"><%= f.label :age, "Age:" %></td>
+		  <td class="input"><%= f.text_field :age %></td>
+		</tr>
+		  <td><%= f.submit "Add Seed" %></td>
+		</tr>
+	</table>
+  </div>
+<% end %>
+
+

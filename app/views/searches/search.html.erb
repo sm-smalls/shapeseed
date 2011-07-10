@@ -1,0 +1,35 @@
+<% @user ||= current_user %>
+
+<% @results.each_index do |index| %>
+<div id="results">
+  <div id="result_name">
+    <p>
+      <%= link_to "#{@people_results[index].first} #{@people_results[index].last}", 
+      		      @people_results[index] %>
+    </p>
+  </div>
+  <div id="result_age">
+    <p>
+      <%= link_to "#{@results[index].age}", 
+      		      @people_results[index] %>
+    </p>
+  </div>
+  <div id="result_story" style="white-space:normal">
+    <p>
+      <%= link_to "#{@results[index].content}", 
+      		      @people_results[index] %>
+    </p>
+  </div>
+</div>
+<% end %>
+
+
+<!--debug search helper.
+<h3>Search query: <%= @search.query %></h3>
+<h3>Search min_age: <%= @search.min_age %></h3>
+<h3>Search max_age: <%= @search.max_age %></h3>
+
+<ul>Name: <%#= link_to result.name, work_path(result) %> - Age - <%#= result.age %></ul>
+-->
+
+

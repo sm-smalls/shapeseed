@@ -1,0 +1,21 @@
+<tr>
+  <td class="work">
+    <span class="age"><%= @work.age %></span>
+  </td>
+  <td class="work" style="text-align:center; border-top: 1px solid #ccc;">
+    <span class="content"><%= @work.content %></span>
+  </td>
+  <td class="work"
+    <span class="name"><%= @work.name %></span>
+  </td>
+  <% if current_user?(@work.user) %>
+    <td>
+      <%#= link_to "delete", work, :method => :delete, :confirm => "Are you sure?",
+    							:title => work.content %>
+      <%= link_to "delete", work, :method => :delete %>
+    </td>
+  <% end %>
+</tr>
+
+
+

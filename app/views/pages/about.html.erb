@@ -1,0 +1,36 @@
+	
+    <p class="blurb round">
+    Throughout our lives, we are shaped by our environment, but some influences make such an 
+    indelible difference that we place them in higher regard. From the book that changed the 
+    way you view the world to the teacher that believed in you to the album that resonated in 
+    your heart, these are what made us who we are today. 
+    </p>
+    
+    <br />
+    
+    <p class="blurb round">
+    It is also what made the people that we look up to who they are today. Think of the most 
+    accomplished person you know. What inspired them? What pushed them to accomplish their achievements?
+    The world wants to know this and you can help. 
+    </p>
+    
+    <br />
+    
+    <p class="blurb round">
+    The best way is to interview them. Take a video, audiorecord it, and we'll post it. Enter the seeds
+    and they'll be there forever to inspire the next generation of scientists, writers, actors, and diplomats.
+    Another way is to suggest someone that you want to learn more about. Sometimes all it 
+    takes is a stage with an audience.
+    </p>
+    
+    <!--<p class="blurb round">
+    ShapeSeed's goal is to create a corpus of the resources that transform, inspire, and shape us. 
+    We think that there is great utility in this and want you to contribute to that corpus by 
+    joining and creating your very own timeline of what seeds shaped who you are today. For 
+    inspiration, take a look at <a href="www.dictionary.com">one</a> of ours. 
+    </p>-->
+    
+    <br />
+<% if !signed_in? %>
+<p><%= link_to "Sign up here!", signup_path, :class => "signup_button round" %></p>
+<% end %>

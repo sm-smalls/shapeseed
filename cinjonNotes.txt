@@ -1,0 +1,23 @@
+1. Eliminate Name field from Sign Up
+2. Instead, have it be a field you generate when creating your timeline
+3. Also, ask age then too
+4. Layout_links_spec.rb is not working. It is returning errors on 
+   "when signed in should have a profile link"  and
+   "when signed in should have a signout link"
+   The errors are related to not being signed in. So I think that what is 
+   happening is that when visiting root_path, it not staying signed in or
+   that there is no user defined by factory, so it fails to sign in.
+   
+   This is hte same in "should sign a user in and out" in spec/requests/users_spec
+5. Comments to take out as well. They appear in the source html code. 
+6. Search Box for names (fill in as you're typing)
+7. Explain Spork process in notes to Star, as well as other opening processes like
+   db:populate and such
+8. Browse by ..
+		- random
+		- alphabetical
+		- 10 / 15 / 20 ? users at a time?
+9. Timeline a model or not?
+	- Im thinking no because it would be good to be able to quickly add a work
+	without having to go through timelne nad it doesnt seem necessary to pin works
+	to the timeline. We can just pin works to the user as is. 

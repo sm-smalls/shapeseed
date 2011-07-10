@@ -1,0 +1,339 @@
+/* Round corners */
+/*Doesnt work on IE, but should work on other major browsers*/
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+body {
+  background: #29264d;
+  color: #09c;
+  /*#494573;*/
+}
+
+#container {
+  color: #09c;
+  width: 800px;
+  margin: auto;
+  font-weight: bold;
+}
+
+#header {
+
+}
+  
+
+#footer {
+  margin-top: 3em;
+  padding-bottom: 3em;
+}
+
+#top {	
+  height: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-style:solid;
+  /*border-left:thick solid #fff;
+  border-right:thick solid #fff;
+  border-top:thick solid #fff;*/
+}
+
+#links {
+}
+
+#userDisplay {
+  display: block;
+  float: right;
+  /*border:solid #fff;*/
+}
+
+#welcome {
+  float: left;
+  font-size: 190%;
+  padding-left: 115px;
+}
+
+/* Search */
+#search {
+  display: block;
+  float: left;
+  color: #fff;
+  font-weight: bold;
+}
+
+#result_name {
+  float:left;
+  width: 135px;
+  margin-left: 15px;
+  margin-right: 30px;
+  margin-top: 22px;
+  line-height: 65%;
+}
+
+#result_age {
+  float:left;
+  width: 16px;
+  margin-top: 15px;
+}
+
+#result_story {
+  margin-left: 30px;
+  width:500px;
+  margin-top: 15px;
+  float:left;
+  border-bottom: 1px solid;
+}
+
+#seedName {
+
+}
+
+#seedAge {
+  clear:both
+}
+
+#seedStory {
+  clear:both
+}
+
+
+div.seedDesc {
+  float:left;
+  width: 165px;
+  white-space: normal;
+  color: black;
+  font-size: x-small;
+  font-weight:normal;
+  margin-left: 20px;
+}
+
+div.seedInstr {
+  float:left;
+}
+
+div.seedBox {
+  float:left;
+  margin-left: 20px;
+}
+
+#content {
+  width:800px;
+  clear:both;
+  margin: auto;
+}
+
+section {
+  overflow: auto;
+  margin-top: 0.5em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+  /*white-space: nowrap;
+  #87ceeb;*/
+}
+
+
+/* Raphael Canvas */
+#holder {
+  clear: both;
+}
+
+#suggest {
+  margin-left:105px;
+}
+
+section h1 {
+  font-size: 250%;
+}
+
+h1, p {
+  font-family: "adelle-1";
+  font-size: 110%;
+  /*font-family: serif;*/
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+/* Navigation */
+
+nav {
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+  text-align: right;
+  background-color: white;
+  padding: 0 0.7em;
+  /*margin-bottom: 10px;*/
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+a:visited {
+  color: #069;
+}
+
+/* Sign up button */
+
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #494573;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 20px;
+}
+
+a.signup_button:hover {
+  /*background: #333*/
+  background: #7565c7
+}
+
+p.blurb {
+  color: #fff;
+  border: 1px solid #494573;
+  padding: 1.5em;
+  background: #494573;
+}
+
+/* Signup */
+div.field, div.actions {
+  margin-bottom: 10px;
+  clear: both;
+}
+
+div.suggesthelp {
+  float:left; 
+  margin-left: 15px; 
+  margin-top: 4px;
+  width: 345px;
+  font-size: 73%;
+}
+
+/*Error messages */
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  border: 1px solid red;
+  display: table;
+}
+
+/*.field_with_errors label {
+  color: #fff;
+}*/
+
+#error_explanation {
+  width: 400px;
+  border: 1px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#search_help ul li {
+  font-size: 12px;
+  text-align:left;
+  width: 150px;
+}
+
+/* User Index */
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
+/*CSS for Works ... currently in poor condition */
+h1.work {
+  margin-bottom: 0.3em;
+}
+
+#relations_mentors {
+  margin-right: 100px;
+  float: left;
+}
+
+#relations_contributeds {
+  float:left;
+}
+
+div.tags {
+  margin-left: 1.5em
+} 
+
+form.new_work {
+  margin-bottom: 2em;
+}
+
+form.new_work textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+

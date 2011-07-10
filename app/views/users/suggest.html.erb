@@ -1,0 +1,38 @@
+<div id="suggest">
+  <%= form_for(@person) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <div style="float:left">
+      <%= f.text_field :name, :size => 37%> 
+    </div>
+    <div class="suggesthelp"> 
+      <p>Albert Einstein</p>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <div style="float:left">
+      <%= f.text_field :title, :size => 37%>
+    </div>
+    <div class="suggesthelp"> 
+      <p>Father of Modern Physics</p>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <div style="float:left">
+      <%= f.text_area :description, :size => "27x5", :wrap => "soft"%>
+    </div>
+    <div class="suggesthelp"> 
+      <p>A renowned German born physicist who won the Nobel Prize for the discovery of the 
+         photoelectric effect. Well-known for the Annus Mirabilis Papers, he also played a major 
+         role in the Manhattan Project and famously denounced using nuclear fission as a weapon.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit "Suggest" %>
+  </div>
+  <% end %>
+</div>

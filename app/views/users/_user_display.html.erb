@@ -1,0 +1,43 @@
+<% @user ||= current_user %>
+<% if signed_in? %>
+  <div id="userInfo" style="margin-left: 10px">
+		<span class="user_name" style="font-size: 140%">
+		  <%= @user.first %> <%= @user.last %> 
+	    </span><br />
+	  <!-- Fix later -->
+	  <% if (@user.mentors.count > 0) %>
+		<a href="<%= relations_path(@user) %>">
+		  <span style="color: #fff">
+			<%= pluralize(@user.mentors.count, "Following") %>
+		  </span>
+		</a>
+		<br />
+	  <% end %>
+	  <% if @user.contributeds.index_by{|person| person[:id]}.values.count > 0 %>
+		<a href="<%= relations_path(@user) %>">
+		  <span style="color: #fff">
+			<%= pluralize(@user.contributeds.count, "Contribution") %>
+		  </span>
+		</a>
+		<br />
+	  <% end %>
+  </div>
+  
+<% else %>
+  <div id="userInfo">
+	  <%= form_for(:user_session, :url => user_sessions_path) do |f| %>
+	    <% f.error_messages %>
+		<div class="field">
+		  <%= f.text_field :email, :size => 22, :placeholder => "Email" %>
+		<br />
+		  <%= f.password_field :password, :size => 22, :placeholder => "Password" %>
+		<br />
+		  <%= f.label :remember_me, "Remember" %> <%= f.check_box :remember_me %>
+		  <%= f.submit "Log In" %>
+		<br />
+		  <%= link_to "New? Sign Up", signup_path %>
+		</div>
+	  <% end %>  
+  </div>
+
+<% end %>

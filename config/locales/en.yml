@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  activerecord:
+    attributes:
+      user: 
+        first_name: "First Name"
+        last_name:  "Last Name"
+      tag:
+        name: "Tag Name"
+      work:
+        name: "Seed Name"
+        age:  "Seed Age"
+      search:
+        min_age: "Minimum Age"
+        max_age: "Maximum Age"
+        query:   "Search Query"

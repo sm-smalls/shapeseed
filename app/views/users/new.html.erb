@@ -1,0 +1,10 @@
+<div style="float:left; margin-left: 105px">
+<h3>Sign Up</h3>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'fields', :f => f %>
+  <div class="actions">
+    <%= f.submit "Sign Up" %>
+  </div>
+<% end %>
+</div>

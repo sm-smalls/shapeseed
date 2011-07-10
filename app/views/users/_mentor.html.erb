@@ -1,0 +1,5 @@
+<%= form_for current_user.mentorships.build(:mentor_id => @person.id),
+											:remote => true do |f| %>
+  <div><%= f.hidden_field :mentor_id %></div>
+  <div class="actions"><%= f.submit "Follow" %></div>
+<% end %>
