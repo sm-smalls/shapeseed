@@ -1,4 +1,4 @@
-CinjonTransform::Application.routes.draw do
+Shapeseed::Application.routes.draw do
   
   resources :user_sessions
   resources :works, :only => [:create, :destroy, :show] do

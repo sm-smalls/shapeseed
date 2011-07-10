@@ -5,11 +5,10 @@ class WorksController < ApplicationController
     @person = Person.find(params[:work][:person_id])
     @work = @person.works.build(params[:work])
     if @work.save
-      flash[:success] = "Seed Added!"
       redirect_back_or_default @person
     else
-      flash[:notice] = "Seed Submission Unsuccessful: Please check that the Name and Age fields are correct"
-      redirect_back_or_default @person
+      flash[:notice] = "Seed Submission Unsuccessful: Please check that input fields are correct"
+      redirect_to :action => "contribute", :controller => "people", :id => @person.id
     end
   end
   
