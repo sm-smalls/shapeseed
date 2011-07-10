@@ -14,11 +14,18 @@
   <div id="seedStory">
     <%= f.label :content, "Tell the story" %><br />
     <div class="seedBox"><%= f.text_area :content, :size => "27x5" %></div>
-    <div class="seedDesc" style="width:280px; margin-top:3px">
+    <div class="seedDesc" style="margin-top:3px">
 	  <p>After dropping out of college, I took a calligraphy course about what makes great typography great
 	  that fascinated me with its beauty and artistic subtlety. That experience has influenced my 
 	  designs ever since.</p>
 	</div>
+  </div>
+  <div id="seedSource">
+    <%= f.label :source, "Found where?" %><br />
+    <div class="seedBox"><%= f.text_field :source, :size => 37 %></div>
+    <div class="seedDesc" style="margin-top:5px">
+      <p>Stanford Commencement Speech 2005</p>
+    </div>
   </div>
   <%= f.hidden_field :person_id %>
   <div class="submitButton" style="clear:both">

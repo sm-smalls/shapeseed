@@ -103,12 +103,17 @@ body {
 
 #seedStory {
   clear:both;
+  margin-bottom: 35px;
+}
+
+#seedSource {
+  clear:both;
 }
 
 div.seedDesc {
   float:left; 
   margin-left: 15px; 
-  width: 365px;
+  width: 280px;
   margin-top: 1px;
   font-size: 73%;
 }

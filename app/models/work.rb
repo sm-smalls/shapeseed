@@ -1,5 +1,5 @@
 class Work < ActiveRecord::Base
-  attr_accessible :content, :age, :name
+  attr_accessible :content, :age, :name, :source
   
   belongs_to :person
   has_many :tags
@@ -8,6 +8,7 @@ class Work < ActiveRecord::Base
   validates					:content,	 :presence => true
   validates_numericality_of :age, 	     :greater_than => 0, :less_than => 100,
   					   			  		 :message => "should be an integer between 0 and 100"
+  validates 				:source,	 :presence => true
   validates 				:person_id,  :presence => true
   
   #for acts_as_indexed
