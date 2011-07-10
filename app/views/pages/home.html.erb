@@ -2,28 +2,32 @@
 
 <% @work_results.each_index do |index| %>
 <div id="results">
+
   <div id="result_name">
     <p>
       <%= link_to "#{@people_results[index].first} #{@people_results[index].last}", 
       		      @people_results[index] %>
-    </p>
-    <p style="font-size: 75%">
-      <%= link_to "#{@people_results[index].title}",
-      			  @people_results[index] %>
+      <span style="font-size: 50%"> <br />
+        <%= link_to "#{@people_results[index].title}",
+      			    @people_results[index] %>
+      </span>
     </p>
   </div>
+  
   <div id="result_age">
     <p>
       <%= link_to "#{@work_results[index].age}", 
       		      @people_results[index] %>
     </p>
   </div>
-  <div id="result_story" style="white-space:normal">
+  
+  <div id="result_story">
     <p>
-      <%= link_to "#{@work_results[index].content}", 
-      		      @people_results[index] %>
+      <%= link_to "#{@work_results[index].content}",
+      			  @people_results[index] %>
     </p>
   </div>
+  
 </div>
 <% end %>
 
