@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :set_user
   
   def home
-    @title = "Home"
+    @title = "ShapeSeed"
     @search = Search.new
     @work_results = Person.all.shuffle.
     						   map{|person| person.works[rand(person.works.length)]}.

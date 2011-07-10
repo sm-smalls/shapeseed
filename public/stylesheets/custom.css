@@ -92,26 +92,25 @@ body {
 }
 
 #seedName {
-
+  clear:both;
+  margin-bottom: 35px;
 }
 
 #seedAge {
-  clear:both
+  clear:both;
+  margin-bottom: 35px;
 }
 
 #seedStory {
-  clear:both
+  clear:both;
 }
 
-
 div.seedDesc {
-  float:left;
-  width: 165px;
-  white-space: normal;
-  color: black;
-  font-size: x-small;
-  font-weight:normal;
-  margin-left: 20px;
+  float:left; 
+  margin-left: 15px; 
+  width: 365px;
+  margin-top: 1px;
+  font-size: 73%;
 }
 
 div.seedInstr {
@@ -120,7 +119,6 @@ div.seedInstr {
 
 div.seedBox {
   float:left;
-  margin-left: 20px;
 }
 
 #content {
@@ -310,10 +308,6 @@ ul.users {
   list-style: none;
 }
 
-/*CSS for Works ... currently in poor condition */
-h1.work {
-  margin-bottom: 0.3em;
-}
 
 #relations_mentors {
   margin-right: 100px;
@@ -327,15 +321,6 @@ h1.work {
 div.tags {
   margin-left: 1.5em
 } 
-
-form.new_work {
-  margin-bottom: 2em;
-}
-
-form.new_work textarea {
-  height: 4em;
-  margin-bottom: 0;
-}
 
 
 

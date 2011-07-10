@@ -35,6 +35,7 @@ class PeopleController < ApplicationController
   def contribute
     @search = Search.new
     @person = Person.find(params[:id])
+    @title = "#{@person.first} #{@person.last}"
   end
 
   def update

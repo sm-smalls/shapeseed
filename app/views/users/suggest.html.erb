@@ -2,7 +2,7 @@
   <%= form_for(@person) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Name the Person" %><br />
     <div style="float:left">
       <%= f.text_field :name, :size => 37%> 
     </div>
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title, "Title their Role" %><br />
     <div style="float:left">
       <%= f.text_field :title, :size => 37%>
     </div>
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description, "Detail their Accomplishments"%><br />
     <div style="float:left">
       <%= f.text_area :description, :size => "27x5", :wrap => "soft"%>
     </div>
