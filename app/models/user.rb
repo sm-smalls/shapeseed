@@ -79,6 +79,10 @@ class User < ActiveRecord::Base
     mentorships.create!(:mentor_id => mentor.id)
   end
   
+  def unmentee!(mentor)
+    mentorships.find_by_mentor_id(mentor).destroy
+  end
+  
   def mentoree?(mentor)
     mentorships.find_by_mentor_id(mentor)
   end 

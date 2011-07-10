@@ -5,7 +5,7 @@ class MentorshipsController < ApplicationController
     @person = Person.find(params[:mentorship][:mentor_id])
     current_user.mentee!(@person)
     respond_to do |format|
-      format.html { redirect_to @person }
+      format.html { redirect_to root }
       format.js
     end
   end
@@ -14,7 +14,7 @@ class MentorshipsController < ApplicationController
     @person = Mentorship.find(params[:id]).mentor
     current_user.unmentee!(@person)
     respond_to do |format|
-      format.html { redirect_to @person }
+      format.html { redirect_to root }
       format.js
     end
   end

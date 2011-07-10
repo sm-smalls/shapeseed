@@ -1,2 +1,2 @@
-$("mentor_form").update("<%= escape_javascript(render('users/mentor')) %>")
-$("mentees").update('<%= "#{@person.mentees.count} Followers" %>')
+$("#mentor_form").html("<%= escape_javascript(render('users/mentor')) %>")
+$("#mentees").html('<%= pluralize(@person.mentees.count, "Follower") %>')

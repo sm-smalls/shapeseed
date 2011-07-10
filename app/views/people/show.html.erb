@@ -3,10 +3,10 @@
     <%= @person.first %> <%= @person.last %>
     <br />
     <div style="clear: both; font-size: 55%">
-	  <div style="float: left;"><%= pluralize(@person.mentees.count, "Follower") %></div>
+	  <div id="mentees" style="float: left;"><%= pluralize(@person.mentees.count, "Follower") %></div>
       <div style="float: left; margin-left: 20px;"><%= render 'users/mentor_form' if signed_in? %></div>
       <% if signed_in? %>
-        <div style="float: left; margin-left: 30px;">
+        <div style="margin-left: 36px;">
           <%= button_to "Contribute Seed", :action => "contribute", :id => @person.id %>
         </div>
       <% end %>   
