@@ -5,6 +5,7 @@ class WorksController < ApplicationController
     @person = Person.find(params[:work][:person_id])
     @work = @person.works.build(params[:work])
     if @work.save
+      current_user.contribute!(@person, @work)
       flash[:notice] = "Seed Submission Success!"
       redirect_to :action => "contribute", :controller => "people", :id => @person.id
     else

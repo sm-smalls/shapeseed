@@ -1,24 +1,26 @@
 <div>
-<div style="margin-left: 102px; font-size: 135%; float:left">
-    <%= @person.first %> <%= @person.last %>
-    <br />
+
+<div style="width: 350px; margin-left: 100px; float: left">
+  <p style="font-size: 85%">
+    <%= @person.description %>
+  </p>
+</div>
+
+<div style="margin-left: 102px; font-size: 135%; float:right">
     <div style="clear: both; font-size: 55%">
 	  <div id="mentees" style="float: left;"><%= pluralize(@person.mentees.count, "Follower") %></div>
       <div style="float: left; margin-left: 20px;"><%= render 'users/mentor_form' if signed_in? %></div>
       <% if signed_in? %>
-        <div style="margin-left: 36px;">
-          <%= button_to "Contribute Seed", :action => "contribute", :id => @person.id %>
+        <div style="clear:both; font-size:55%">
+          <%= link_to "Contribute Seed", :action => "contribute", :id => @person.id %>
         </div>
       <% end %>   
     </div>
 </div>
 
-<div style="width: 350px; margin-right: 80px; float: right">
-  <p style="font-size: 75%">
-    <%= @person.description %>
-  </p>
 </div>
-</div>
+
+
 
 <div id="holder"></div>
 

@@ -1,4 +1,4 @@
-<div>
+<div style="float:left">
  <%= form_for @person.works.build(:person_id => @person.id) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div id="seedName">
@@ -32,4 +32,7 @@
   	<%= f.submit "Add Seed" %>
   </div>
 <% end %>
+</div>
+<div style="float:right; margin-top: 286px;">
+  	<%= button_to "Return to Timeline", :action => "show", :controller => "people", :id => @person.id %>
 </div>

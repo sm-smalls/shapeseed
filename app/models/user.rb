@@ -65,8 +65,8 @@ class User < ActiveRecord::Base
   #End
   
   #Contribution Functions
-  def contribute!(contributed)
-    contributions.create!(:contributed_id => contributed.id)
+  def contribute!(contributed, work)
+    contributions.create!(:contributed_id => contributed.id, :work_id => work.id)
   end
   
   def contribute?(contributed)

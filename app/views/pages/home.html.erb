@@ -1,8 +1,8 @@
 <% @user ||= current_user %>
 
 <% @work_results.each_index do |index| %>
-<div id="results">
 
+<div id="results">
   <div id="result_name">
     <p>
       <%= link_to "#{@people_results[index].first} #{@people_results[index].last}", 
@@ -20,16 +20,21 @@
       		      @people_results[index] %>
     </p>
   </div>
-  
-  <div id="result_story">
+  <% if index < @worklength - 1 %>
+    <div id="result_story">
+  <% else %>
+    <div id="result_story" style="border:none">
+  <% end %>
     <p>
       <%= link_to "#{@work_results[index].content}",
       			  @people_results[index] %>
     </p>
   </div>
-  
 </div>
 <% end %>
+
+
+
 
 
 

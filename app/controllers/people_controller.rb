@@ -22,7 +22,6 @@ class PeopleController < ApplicationController
 	@person = Person.new(:title => params[:person][:title], :description => params[:person][:description],
 						 :first => first, :last => last)
 	if @person.save
-	  current_user.contribute!(@person)
 	  if !current_user.mentoree?(@person)
 		current_user.mentee!(@person)
 	  end
