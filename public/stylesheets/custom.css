@@ -45,8 +45,8 @@ body {
 
 #welcome {
   float: left;
-  font-size: 190%;
-  padding-left: 115px;
+  padding-top: 60px;
+  height: 50px;
 }
 
 /* Search */
