@@ -9,12 +9,9 @@ gem 'mocha'
 gem 'faker', '0.3.1'
 gem "authlogic"
 gem "rails3-generators"
-gem 'scaffoldhub'
 
 group :development do
   gem 'rspec-rails', '2.5.0'
-  gem 'annotate-models', '1.0.4'
-  gem 'nifty-generators'
 end
 
 group :test do
