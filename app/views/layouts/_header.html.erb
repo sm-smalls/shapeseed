@@ -1,7 +1,17 @@
 <header>
   <nav class="round">
     <ul>
-      <li style="float:left"><%= link_to "ShapeSeed", root_path %></li>
+	  <li style="padding: 0 0; float:left; margin-left: 8px;">
+	  <% if signed_in? %>
+	    <%= link_to "#{current_user.first} #{current_user.last}", relations_path(current_user)%>
+	  <% else %>
+	    <%= render 'users/user_display' %>
+	  <% end %>
+	  </li>
+	
+	  <% if !(@title == "ShapeSeed") %>
+        <li><%= link_to "ShapeSeed", root_path %></li>
+	  <% end %>
       <li><%= link_to "Suggest", suggest_path %></li>
       <% if signed_in? %>
         <li><%= link_to "Sign Out", logout_path %></li>

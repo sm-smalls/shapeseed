@@ -1,7 +1,8 @@
-<div id="welcome">
-<!-- Will contain an if statement on signed_in. If not signed in, will display logo in top left, 
-search in top right, and the sign-up button in the middle (down) / sign-in button on right (down). 
-If signed in, user info replaces the middle area of the div header.-->
+<% if (@title == "ShapeSeed") %>
+  <div id="welcome" style="margin-left:80px">
+<% else %>
+  <div id="welcome">
+<% end %>
 
 <p style="color: #fff; font-size:300%"><%= title %></p>
 

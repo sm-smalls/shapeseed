@@ -20,17 +20,18 @@ body {
 }
 
 #header {
-
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
   
 
 #footer {
+  margin-top: 1.5em;
 }
 
 #top {	
   height: 100px;
   margin-bottom: 10px;
-  margin-top: 10px;
   border-style:solid;
 }
 
@@ -40,6 +41,7 @@ body {
 #userDisplay {
   display: block;
   float: right;
+  margin-right:5px;
   /*border:solid #fff;*/
 }
 
@@ -55,35 +57,43 @@ body {
   float: left;
   color: #fff;
   font-weight: bold;
+  border-right: 2px solid #494573;
+  border-bottom: 2px solid #494573;
 }
 
 #results {
   width: 760px;
   clear: both;
+  margin: auto;
+  margin-top: 15px;
 }
 
 #result_name {
   float:left;
-  width: 165px;
-  margin-left: 15px;
-  margin-right: 30px;
-  margin-top: 22px;
+  width:155px;
+  margin-left: 5px;
+  margin-right: 25px;
   line-height: 65%;
+  margin-top: 7px;
 }
 
 #result_age {
   float:left;
   width: 16px;
-  margin-top: 15px;
 }
 
 #result_story {
-  margin-left: 30px;
-  width:485px;
-  margin-right: 15px;
-  margin-top: 15px;
+  margin-left: 25px;
+  width:439px;
   float:left;
-  border-bottom: 1px solid;
+  border-bottom:1px solid;
+}
+
+#result_follow {
+  margin-right: 5px;
+  width: 65px; 
+  margin-left: 25px;
+  float:left;
 }
 
 #seedName {
@@ -129,8 +139,6 @@ div.seedBox {
 
 section {
   overflow: auto;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
   font-size: 120%;
   padding: 20px;
   background: #fff;
@@ -141,7 +149,14 @@ section {
 
 /* Raphael Canvas */
 #holder {
-  clear: both;
+  float:left;
+  width: 630px;
+}
+
+#contributor_list {
+  float:left;
+  width:120px;
+  margin-left:5px;
 }
 
 #suggest {
@@ -155,6 +170,8 @@ section h1 {
 h1, p {
   font-family: "adelle-1";
   font-size: 110%;
+  margin-left: auto; 
+  margin-right: auto;
   /*font-family: serif;*/
 }
 

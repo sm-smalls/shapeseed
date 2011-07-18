@@ -20,6 +20,7 @@
       		      @people_results[index] %>
     </p>
   </div>
+
   <% if index < @worklength - 1 %>
     <div id="result_story">
   <% else %>
@@ -30,6 +31,27 @@
       			  @people_results[index] %>
     </p>
   </div>
+
+<% if signed_in? %>
+  <div id="result_follow">
+	<div>
+	  <% if current_user.mentoree?(@people_results[index]) %>
+	    <%= form_for current_user.mentorships.find_by_mentor_id(@people_results[index]),
+							:html => { :method => :delete },
+							:remote => true do |f| %>
+		  <div class="actions"><%= f.submit "Unfollow" %></div>
+		<% end %>
+	  <% else %>
+	    <%= form_for current_user.mentorships.build(:mentor_id => @people_results[index].id),
+													:remote => true do |f| %>
+		  <div><%= f.hidden_field :mentor_id %></div>
+		  <div class="actions"><%= f.submit "Follow" %></div>
+		<% end %>
+	  <% end %>
+	</div>
+  </div>
+<% end %>
+
 </div>
 <% end %>
 

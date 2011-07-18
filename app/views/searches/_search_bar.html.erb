@@ -4,11 +4,8 @@
     <%= render 'shared/error_messages', :object => f.object %>
 	  <div class="fieldbar round left">
     	<%= f.text_field :query, :placeholder => " Search ShapeSeed: ", :size => 20 %>
-	  <br />
     	<%= f.text_field :min_age, :placeholder => " Between Age: ", :size => 20 %>
-      <br />
     	<%= f.text_field :max_age, :placeholder => " And Age: ", :size => 20 %>
-      <br />
         <%= f.submit "Search" %>
       </div>
   <% end %>

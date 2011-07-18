@@ -28,7 +28,6 @@ GEM
       activemodel (= 3.0.5)
       activesupport (= 3.0.5)
     activesupport (3.0.5)
-    annotate-models (1.0.4)
     arel (2.0.10)
     authlogic (2.1.6)
       activesupport
@@ -54,7 +53,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mocha (0.9.12)
-    nifty-generators (0.4.6)
     nokogiri (1.4.4)
     polyglot (0.3.1)
     pr_geohash (1.0.0)
@@ -94,8 +92,6 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.5.0)
-    scaffoldhub (0.1.3)
-      rails
     spork (0.9.0.rc4)
     sqlite3-ruby (1.3.2)
     sunspot (1.2.1)
@@ -118,19 +114,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate-models (= 1.0.4)
   authlogic
   database_cleaner (= 0.6.6)
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
   jquery-rails
   mocha
-  nifty-generators
   rails (= 3.0.5)
   rails3-generators
   rspec (= 2.5.0)
   rspec-rails (= 2.5.0)
-  scaffoldhub
   spork (= 0.9.0.rc4)
   sqlite3-ruby (= 1.3.2)
   sunspot_rails (~> 1.2.1)

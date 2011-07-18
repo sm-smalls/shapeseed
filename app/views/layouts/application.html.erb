@@ -16,16 +16,15 @@
         <div id="links">
           <%= render 'layouts/header' %>
         </div>
-        <div id="top" class="round">
-          <%= render 'searches/search_bar' %>
-          <%= render 'shared/welcome' %>
-          <div id="userDisplay">
-            <%= render 'users/user_display' %>
-          </div>
-        </div>
       </div>
       <div id="content"> 
         <section class="round">
+	        <div id="top" class="round">
+	          <%= render 'searches/search_bar' %>
+	          <div id="userDisplay">
+	            <%= render 'users/user_display' %>
+	          </div>
+	        </div>
           <% flash.each do |key, value| %>
           <div class="flash <%= key %>" style="text-align:center"><%= value %></div>
           <% end %>
