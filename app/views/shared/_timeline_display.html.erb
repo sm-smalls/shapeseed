@@ -160,7 +160,7 @@
 			      tempText = "";
 				  for (var i = 0; i < contentWords.length; i++) {
 					contentTextB.attr("text", tempText + "" + contentWords[i]);
-					if (contentTextB.getBBox().width > contentBox.getBBox().width - 1) {
+					if (contentTextB.getBBox().width > contentBox.getBBox().width - 12) {
 					  tempText += "\n" + contentWords[i];
 					  console.log(contentWords[i]);
 					} else {
