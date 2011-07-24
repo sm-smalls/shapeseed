@@ -122,7 +122,7 @@
 			  if(nText) {
 				  for (var i = 0; i < nameWords.length; i++) {
 					nametagTextB.attr("text", tempText + "" + nameWords[i]);
-					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 2) {
+					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 1) {
 					  tempText += "\n" + nameWords[i];
 					} else {
 					  tempText += " " + nameWords[i];
@@ -141,7 +141,7 @@
 			      tempText += "\t";
 				  for (var i = 0; i < tagWords.length; i++) {
 					nametagTextB.attr("text", tempText + "" + tagWords[i]);
-					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 2) {
+					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 1) {
 					  tempText += "\n" + tagWords[i];
 					} else {
 					  tempText += " | " + tagWords[i];
@@ -160,14 +160,13 @@
 			      tempText = "";
 				  for (var i = 0; i < contentWords.length; i++) {
 					contentTextB.attr("text", tempText + "" + contentWords[i]);
-					if (contentTextB.getBBox().width > contentBox.getBBox().width - 10) {
+					if (contentTextB.getBBox().width > contentBox.getBBox().width - 1) {
 					  tempText += "\n" + contentWords[i];
+					  console.log(contentWords[i]);
 					} else {
 					  tempText += " " + contentWords[i];
 					}
-					console.log(tempText);
 				  }
-				  console.log(tempText);
 				  contentTextB.attr("text", tempText.substring(1));
 				  contentBox.hide();
 				  contentBox = r.rect(contentBox.getBBox().x, 
