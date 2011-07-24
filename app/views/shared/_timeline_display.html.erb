@@ -26,7 +26,7 @@
 			  var pathAttr = ["M", sideBorder/2, upperBorder];
 			  for(var i = 0; i < boxNumber; i++) {
 			    if(i > 0) { //Boxes in order, going down
-			      var yCoord = box[1].getBBox().y + box[1].getBBox().height + boxHeight*1/3 + 2;
+			      var yCoord = box[3].getBBox().y + box[3].getBBox().height + boxHeight*1/3 + 2;
 				}
 				else { //Top box, the highest age
 			      var yCoord = upperBorder + lowerBorder;
@@ -68,7 +68,7 @@
 			  textNameTag.translate(boxNameTag.getBBox().x + 5 - textNameTag.getBBox().x,
 			  						boxNameTag.getBBox().y - textNameTag.getBBox().y + 1);
 			  textContent.translate(boxContent.getBBox().x + 5 - textContent.getBBox().x,
-			  						boxContent.getBBox().y - textContent.getBBox().y + 1);		
+			  						boxContent.getBBox().y - textContent.getBBox().y + 1);
 			  box.push(boxNameTag);
 			  box.push(boxContent);
 			  box.push(textNameTag);
@@ -115,14 +115,15 @@
 			function writeText(cText, nText, tText, 
 							   nameTagBox, contentBox,
 							   nametagTextB, contentTextB) {
+			  var maxWidth = 503;
 			  if(cText){var contentWords = cText.split(" ");}
 			  if(nText){var nameWords = nText.split(" ");}
 			  if(tText){var tagWords = tText.split(" ");}
 			  var tempText = "";
 			  if(nText) {
 				  for (var i = 0; i < nameWords.length; i++) {
-					nametagTextB.attr("text", tempText + "" + nameWords[i]);
-					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 1) {
+					nametagTextB.attr("text", tempText + " " + nameWords[i]);
+					if (nametagTextB.getBBox().width > maxWidth) {
 					  tempText += "\n" + nameWords[i];
 					} else {
 					  tempText += " " + nameWords[i];
@@ -140,8 +141,8 @@
 			  if(tText) {
 			      tempText += "\t";
 				  for (var i = 0; i < tagWords.length; i++) {
-					nametagTextB.attr("text", tempText + "" + tagWords[i]);
-					if (nametagTextB.getBBox().width > nameTagBox.getBBox().width - 1) {
+					nametagTextB.attr("text", tempText + " " + tagWords[i]);
+					if (nametagTextB.getBBox().width > maxWidth) {
 					  tempText += "\n" + tagWords[i];
 					} else {
 					  tempText += " | " + tagWords[i];
@@ -159,10 +160,9 @@
 			  if(cText) {
 			      tempText = "";
 				  for (var i = 0; i < contentWords.length; i++) {
-					contentTextB.attr("text", tempText + "" + contentWords[i]);
-					if (contentTextB.getBBox().width > contentBox.getBBox().width - 12) {
+					contentTextB.attr("text", tempText + " " + contentWords[i]);
+					if (contentTextB.getBBox().width > maxWidth) {
 					  tempText += "\n" + contentWords[i];
-					  console.log(contentWords[i]);
 					} else {
 					  tempText += " " + contentWords[i];
 					}
