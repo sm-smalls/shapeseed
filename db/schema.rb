@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110710171620) do
+ActiveRecord::Schema.define(:version => 20110723233752) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(:version => 20110710171620) do
   create_table "people", :force => true do |t|
     t.string   "first"
     t.string   "last"
-    t.text     "title",       :limit => 255
-    t.text     "description", :limit => 255
+    t.text     "title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(:version => 20110710171620) do
     t.integer  "age"
     t.string   "name"
     t.text     "source"
+    t.integer  "contributor_id"
   end
 
   add_index "works", ["person_id"], :name => "index_works_on_person_id"

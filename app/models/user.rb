@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   acts_as_authentic
   
   attr_accessible :first, :last, :email, :password, :password_confirmation 
-  
+    
   #Normal Relationships among users ... follow, be followed
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed

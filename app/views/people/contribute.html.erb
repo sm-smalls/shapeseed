@@ -1,3 +1,5 @@
+<% @user ||= current_user %>
+
 <div style="margin-left: 105px;">
 
   <div style="float:left">
@@ -30,6 +32,7 @@
     </div>
   </div>
   <%= f.hidden_field :person_id %>
+  <%= f.hidden_field :contributor_id, :value => @user.id %>
   <div class="submitButton" style="clear:both">
   	<%= f.submit "Add Seed" %>
   </div>

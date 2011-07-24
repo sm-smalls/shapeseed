@@ -62,6 +62,7 @@
     </div>
   </div>
   <%= f.hidden_field :person_id %>
+  <%= f.hidden_field :contributor_id, :value => current_user.id %>
   <div class="submitButton" style="clear:both">
   	<%= f.submit "Add Seed" %>
   </div>

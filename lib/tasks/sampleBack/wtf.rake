@@ -5,14 +5,14 @@ namespace :db do
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
     make_admin
-    make_users
-    make_people
-    make_works
-    make_relationships
+    #make_users
+    #make_people
+    #make_works
+    #make_relationships
     #make_contributions
-    make_mentorships
-    make_tags
-    make_categories
+    #make_mentorships
+    #make_tags
+    #make_categories
   end
 end
 

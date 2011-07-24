@@ -1,22 +1,23 @@
 class Work < ActiveRecord::Base
-  attr_accessible :content, :age, :name, :source
+  attr_accessible :content, :age, :name, :source, :contributor_id
   
   belongs_to :person
   has_many :tags
   
-  validates 				:name,       :presence => true
-  validates					:content,	 :presence => true
-  validates_numericality_of :age, 	     :greater_than => 0, :less_than => 100,
-  					   			  		 :message => "should be an integer between 0 and 100"
-  validates 				:source,	 :presence => true
-  validates 				:person_id,  :presence => true
+  validates 				:name,       		 :presence => true
+  validates					:content,	 		 :presence => true
+  validates_numericality_of :age, 	     		 :greater_than => 0, :less_than => 100,
+  					   			  		 		 :message => "should be an integer between 0 and 100"
+  validates 				:source,	 		 :presence => true
+  validates 				:person_id,  		 :presence => true
+  validates					:contributor_id,	 :presence => true
   
   #for acts_as_indexed
   acts_as_indexed :fields => [:person_name, :tag_names, :person_categories, :content, :name]
   
   #Orders by age in ascending order
   default_scope :order => 'works.age ASC'
-  
+    
   def self.get_person_works(person)
     where("person_id = ?", person)
   end
