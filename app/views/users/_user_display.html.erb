@@ -1,4 +1,5 @@
 <% @user ||= current_user %>
+  <% if !signed_in? %>
 	<%= form_for(:user_session, :url => user_sessions_path) do |f| %>
 	    <% f.error_messages %>
 		  <%= f.text_field :email, :size => 22, :placeholder => "Email" %>
@@ -6,4 +7,5 @@
 		  <%#= f.label :remember_me, "Auto!" %> <%#= f.check_box :remember_me %>
 		  <%= f.submit "Log In" %>
 		  <%= link_to "New? Sign Up", signup_path %>
+  <% end %>
 <% end %>

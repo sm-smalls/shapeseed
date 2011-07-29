@@ -108,3 +108,888 @@ AbstractController::ActionNotFound (The action 'index' could not be found for Us
   
 
 Rendered /Users/cinjonresnick/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/vendor/plugins/acts_as_indexed/rails/init.rb. (called from <top (required)> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/config/environment.rb:6)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-29 06:35:03 -0400
+  Processing by PagesController#home as HTML
+ApplicationController::set_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.6ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 10:35:05.084033', "perishable_token" = 'MydkQWaThnij4NmUxfDb', "updated_at" = '2011-07-29 10:35:05.084946' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[36mPerson Load (67.1ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mWork Load (0.8ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 10) ORDER BY works.age ASC
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 1) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 11) ORDER BY works.age ASC
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 10 LIMIT 1[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 11 LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.1ms)
+Rendered shared/_error_messages.html.erb (1.7ms)
+Rendered searches/_search_bar.html.erb (46.1ms)
+Rendered users/_user_display.html.erb (2.4ms)
+Rendered layouts/_footer.html.erb (5.9ms)
+Rendered pages/home.html.erb within layouts/application (205.8ms)
+Completed 200 OK in 1610ms (Views: 298.4ms | ActiveRecord: 71.7ms)
+
+
+Started GET "/suggest" for 127.0.0.1 at 2011-07-29 06:37:07 -0400
+  Processing by UsersController#suggest as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 10:37:08.087375', "perishable_token" = 'AGZwdvLB54vLC9VqvSY', "updated_at" = '2011-07-29 10:37:08.088026' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (8.9ms)
+Rendered users/_user_display.html.erb (2.0ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/suggest.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 255ms (Views: 49.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2011-07-29 06:45:32 -0400
+  Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "person"=>{"name"=>"Sir Timothy Berners-Lee", "title"=>"Invented the World Wide Web", "description"=>"As an independent contractor at CERN in 1980, he built a prototype system (ENQUIRE) to facilitate sharing information based on hypertext. In 1989, then a fellow at CERN, he joined the hypertext model to the internet. He also founded and leads the W3C standards body. "}, "commit"=>"Suggest"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 10:45:33.060655', "perishable_token" = 'LLc4zDQ9uKvhsFVfnWqA', "updated_at" = '2011-07-29 10:45:33.061297' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "people" ("first", "last", "title", "description", "created_at", "updated_at", "name") VALUES ('Sir', 'Berners-Lee', 'Invented the World Wide Web', 'As an independent contractor at CERN in 1980, he built a prototype system (ENQUIRE) to facilitate sharing information based on hypertext. In 1989, then a fellow at CERN, he joined the hypertext model to the internet. He also founded and leads the W3C standards body. ', '2011-07-29 10:45:33.146609', '2011-07-29 10:45:33.146609', NULL)[0m
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "mentorships" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (12, 1, '2011-07-29 10:45:33.218491', '2011-07-29 10:45:33.218491')[0m
+Redirected to http://localhost:3000/people/12
+Completed 302 Found in 283ms
+
+
+Started GET "/people/12" for 127.0.0.1 at 2011-07-29 06:45:33 -0400
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+  [1m[36mWork Load (0.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 12) ORDER BY works.age ASC[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 10:45:33.500090', "perishable_token" = 'Gz0bZICtJAkElOnEOXa', "updated_at" = '2011-07-29 10:45:33.500765' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 12)) ORDER BY tags.name ASC[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "mentorships" ON "users".id = "mentorships".mentee_id WHERE (("mentorships".mentor_id = 12))
+ApplicationController::current_user
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (1.0ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1
+Rendered users/_unmentor.html.erb (6.8ms)
+Rendered users/_mentor_form.html.erb (37.9ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (9.3ms)
+Rendered users/_user_display.html.erb (1.9ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered people/show.html.erb within layouts/application (153.5ms)
+Completed 200 OK in 496ms (Views: 177.9ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:01:31 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"High School Teachers", "age"=>"15", "content"=>"Daffy Pernell (chemistry) and Frank Grundy (math) were both teachers who were just bubbling over with enthusiasm that really radiated their passion. Franky would propose a problem, \"Okay, Work this out for N=2.\" Then he would think out loud, \"Is that true for all N?\" or \"Is there a better, quicker, way of doing this?\" Passion was the main thing that both of these role models exhibited.", "source"=>"http://achievement.org/autodoc/page/ber1int-3", "person_id"=>"12", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:01:31.244538', "perishable_token" = 'kXiqI86Iyd6CeMDowriI', "updated_at" = '2011-07-29 11:01:31.245352' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('Daffy Pernell (chemistry) and Frank Grundy (math) were both teachers who were just bubbling over with enthusiasm that really radiated their passion. Franky would propose a problem, "Okay, Work this out for N=2." Then he would think out loud, "Is that true for all N?" or "Is there a better, quicker, way of doing this?" Passion was the main thing that both of these role models exhibited.', 12, '2011-07-29 11:01:31.365512', '2011-07-29 11:01:31.365512', 15, 'High School Teachers', 'http://achievement.org/autodoc/page/ber1int-3', 1)[0m
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 12)) ORDER BY tags.name ASC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE ("categories".person_id = 12) ORDER BY categories.name ASC
+Redirected to http://localhost:3000/contribute?id=12
+Completed 302 Found in 1105ms
+
+
+Started GET "/contribute?id=12" for 127.0.0.1 at 2011-07-29 07:01:32 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:01:32.600332', "perishable_token" = '4lpeRf4d5oofuY1ezzXq', "updated_at" = '2011-07-29 11:01:32.601319' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (12.4ms)
+Rendered users/_user_display.html.erb (1.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/contribute.html.erb within layouts/application (321.8ms)
+Completed 200 OK in 419ms (Views: 355.8ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:04:36 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"My First Computer", "age"=>"5", "content"=>"When I was very small, maybe five or six, I was taken in to Daddy's work, to see a computer. I remember it as being a big cabinet with a clock on it, and with a desk with a paper tape reader. One box which was a paper tape reader and one box which was a paper tape punch. So I came home and put a clock on my cupboard, and put a desk in front of it, and I put one cardboard box, which you pushed the paper tape into, and one cardboard box that you pulled the paper tape out of. So that was my first computer.", "source"=>"http://achievement.org/autodoc/page/ber1int-3", "person_id"=>"12", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:04:36.336965', "perishable_token" = 'UGNSwXVPkgbPsuwioufM', "updated_at" = '2011-07-29 11:04:36.337894' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('When I was very small, maybe five or six, I was taken in to Daddy''s work, to see a computer. I remember it as being a big cabinet with a clock on it, and with a desk with a paper tape reader. One box which was a paper tape reader and one box which was a paper tape punch. So I came home and put a clock on my cupboard, and put a desk in front of it, and I put one cardboard box, which you pushed the paper tape into, and one cardboard box that you pulled the paper tape out of. So that was my first computer.', 12, '2011-07-29 11:04:36.460509', '2011-07-29 11:04:36.460509', 5, 'My First Computer', 'http://achievement.org/autodoc/page/ber1int-3', 1)[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 12)) ORDER BY tags.name ASC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE ("categories".person_id = 12) ORDER BY categories.name ASC
+Redirected to http://localhost:3000/contribute?id=12
+Completed 302 Found in 569ms
+
+
+Started GET "/contribute?id=12" for 127.0.0.1 at 2011-07-29 07:04:36 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:04:37.150166', "perishable_token" = 'EI1RwuH9nOjPXdz5Gjvm', "updated_at" = '2011-07-29 11:04:37.152082' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.8ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (10.6ms)
+Rendered users/_user_display.html.erb (1.8ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered people/contribute.html.erb within layouts/application (320.4ms)
+Completed 200 OK in 386ms (Views: 327.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-29 07:06:00 -0400
+  Processing by PagesController#home as HTML
+ApplicationController::set_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:06:00.279526', "perishable_token" = 'W7oh0anE30rOBm6JtAlZ', "updated_at" = '2011-07-29 11:06:00.280197' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[35mPerson Load (0.9ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mWork Load (0.6ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 11) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 10) ORDER BY works.age ASC
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 1) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.2ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 12) ORDER BY works.age ASC
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 11 LIMIT 1[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 10 LIMIT 1
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.2ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (9.6ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 366ms (Views: 70.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/suggest" for 127.0.0.1 at 2011-07-29 07:10:52 -0400
+  Processing by UsersController#suggest as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:10:52.276063', "perishable_token" = 'M1WeO7csvkxpJrUkhkl', "updated_at" = '2011-07-29 11:10:52.276728' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+ApplicationController::current_user
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered shared/_error_messages.html.erb (0.9ms)
+Rendered searches/_search_bar.html.erb (10.2ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered users/suggest.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 258ms (Views: 42.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2011-07-29 07:15:40 -0400
+  Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "person"=>{"name"=>"David Ho", "title"=>"Pioneer in AIDS Research", "description"=>"Scientific Director and CEO of the AIDS Research Center at Rockefeller University in New York, he has published over 400 papers on AIDS and the mechanism of HIV replication. Devised the HAART treatment and the use of protease inhibitors."}, "commit"=>"Suggest"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:15:40.182939', "perishable_token" = 'yg2mc14N7U9aTn0vUPuc', "updated_at" = '2011-07-29 11:15:40.183562' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "people" ("first", "last", "title", "description", "created_at", "updated_at", "name") VALUES ('David', 'Ho', 'Pioneer in AIDS Research', 'Scientific Director and CEO of the AIDS Research Center at Rockefeller University in New York, he has published over 400 papers on AIDS and the mechanism of HIV replication. Devised the HAART treatment and the use of protease inhibitors.', '2011-07-29 11:15:40.267943', '2011-07-29 11:15:40.267943', NULL)
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "mentorships" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (13, 1, '2011-07-29 11:15:40.341383', '2011-07-29 11:15:40.341383')
+Redirected to http://localhost:3000/people/13
+Completed 302 Found in 284ms
+
+
+Started GET "/people/13" for 127.0.0.1 at 2011-07-29 07:15:40 -0400
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+  [1m[35mWork Load (0.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 13) ORDER BY works.age ASC
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:15:40.609140', "perishable_token" = 'JsQ5Y3wtxF1pKo4B2LE', "updated_at" = '2011-07-29 11:15:40.609769' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mTag Load (0.3ms)[0m  SELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 13)) ORDER BY tags.name ASC
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "mentorships" ON "users".id = "mentorships".mentee_id WHERE (("mentorships".mentor_id = 13))[0m
+ApplicationController::current_user
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.6ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.4ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+Rendered users/_unmentor.html.erb (6.5ms)
+Rendered users/_mentor_form.html.erb (22.0ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (51.2ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/show.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 437ms (Views: 132.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:18:31 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"Books Growing Up", "age"=>"15", "content"=>"I was reading a fair amount of science fiction, including books by Isaac Asmiov, and also books by physicists talking about things that normal people can't really conceive of, like anti-matter. It was interesting to try to think that way, even though I was not understanding everything.", "source"=>"http://achievement.org/autodoc/page/hoa0int-2", "person_id"=>"13", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:18:31.615503', "perishable_token" = 'Q1FfWep1JfuTeUWeyemR', "updated_at" = '2011-07-29 11:18:31.616307' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('I was reading a fair amount of science fiction, including books by Isaac Asmiov, and also books by physicists talking about things that normal people can''t really conceive of, like anti-matter. It was interesting to try to think that way, even though I was not understanding everything.', 13, '2011-07-29 11:18:31.733612', '2011-07-29 11:18:31.733612', 15, 'Books Growing Up', 'http://achievement.org/autodoc/page/hoa0int-2', 1)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 13)) ORDER BY tags.name ASC
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE ("categories".person_id = 13) ORDER BY categories.name ASC[0m
+Redirected to http://localhost:3000/contribute?id=13
+Completed 302 Found in 637ms
+
+
+Started GET "/contribute?id=13" for 127.0.0.1 at 2011-07-29 07:18:32 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:18:32.430521', "perishable_token" = 'zHbT6udEXpL7dap0WY1S', "updated_at" = '2011-07-29 11:18:32.431302' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.8ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (48.0ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/contribute.html.erb within layouts/application (271.8ms)
+Completed 200 OK in 374ms (Views: 277.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:19:36 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"Books in College", "age"=>"19", "content"=>"It was a kind of curiosity that drove me into science. I remember going to the library and trying to look at the Feynman lectures in physics. That's very fundamental physics, nothing too fancy, but presented in his unusual style. I hadn't taken all the requisite courses before reading it, I was just very interested by it.", "source"=>"http://achievement.org/autodoc/page/hoa0int-2", "person_id"=>"13", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:19:36.516571', "perishable_token" = '4BXMgF1L9fpSbofzWY64', "updated_at" = '2011-07-29 11:19:36.517273' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('It was a kind of curiosity that drove me into science. I remember going to the library and trying to look at the Feynman lectures in physics. That''s very fundamental physics, nothing too fancy, but presented in his unusual style. I hadn''t taken all the requisite courses before reading it, I was just very interested by it.', 13, '2011-07-29 11:19:36.634896', '2011-07-29 11:19:36.634896', 19, 'Books in College', 'http://achievement.org/autodoc/page/hoa0int-2', 1)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 13)) ORDER BY tags.name ASC
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE ("categories".person_id = 13) ORDER BY categories.name ASC[0m
+Redirected to http://localhost:3000/contribute?id=13
+Completed 302 Found in 553ms
+
+
+Started GET "/contribute?id=13" for 127.0.0.1 at 2011-07-29 07:19:36 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:19:37.271661', "perishable_token" = 'OZQ0oX6z47PsdsrgroM0', "updated_at" = '2011-07-29 11:19:37.272463' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.8ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (46.9ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered people/contribute.html.erb within layouts/application (273.8ms)
+Completed 200 OK in 384ms (Views: 280.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-29 07:19:41 -0400
+  Processing by PagesController#home as HTML
+ApplicationController::set_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:19:41.615326', "perishable_token" = 'Vw6PhxzZ0M1ca8JDTk7r', "updated_at" = '2011-07-29 11:19:41.616009' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 13) ORDER BY works.age ASC
+  [1m[36mWork Load (0.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 12) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 10) ORDER BY works.age ASC
+  [1m[36mWork Load (0.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 1) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 11) ORDER BY works.age ASC
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 10 LIMIT 1[0m
+  [1m[35mPerson Load (39.6ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 11 LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.4ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.2ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered searches/_search_bar.html.erb (10.7ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (80.3ms)
+Completed 200 OK in 387ms (Views: 86.1ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/suggest" for 127.0.0.1 at 2011-07-29 07:23:46 -0400
+  Processing by UsersController#suggest as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.7ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:23:46.367032', "perishable_token" = 'AHSFb8H8MgGGoFSzJsY', "updated_at" = '2011-07-29 11:23:46.367800' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (9.1ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered users/suggest.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 302ms (Views: 78.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2011-07-29 07:28:12 -0400
+  Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "person"=>{"name"=>"James Watson", "title"=>"Molecular Biologist, Geneticist, and Zoologist", "description"=>"Nobel Prize Winner in Physiology / Medicine for co-discovering the double helix molecular structure of DNA. Later on, in 1988, he helped to establish the Human Genome Project."}, "commit"=>"Suggest"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.8ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:28:13.096399', "perishable_token" = 'NbOE63D8Xnpv9Jyer2', "updated_at" = '2011-07-29 11:28:13.097041' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "people" ("first", "last", "title", "description", "created_at", "updated_at", "name") VALUES ('James', 'Watson', 'Molecular Biologist, Geneticist, and Zoologist', 'Nobel Prize Winner in Physiology / Medicine for co-discovering the double helix molecular structure of DNA. Later on, in 1988, he helped to establish the Human Genome Project.', '2011-07-29 11:28:13.184256', '2011-07-29 11:28:13.184256', NULL)[0m
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.2ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 14 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "mentorships" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (14, 1, '2011-07-29 11:28:13.258297', '2011-07-29 11:28:13.258297')[0m
+Redirected to http://localhost:3000/people/14
+Completed 302 Found in 355ms
+
+
+Started GET "/people/14" for 127.0.0.1 at 2011-07-29 07:28:13 -0400
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+  [1m[36mWork Load (0.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 14) ORDER BY works.age ASC[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:28:13.532793', "perishable_token" = 'kcNn0hCItEJ5iuSKwBrd', "updated_at" = '2011-07-29 11:28:13.533515' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 14)) ORDER BY tags.name ASC[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "mentorships" ON "users".id = "mentorships".mentee_id WHERE (("mentorships".mentor_id = 14))
+ApplicationController::current_user
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.7ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 14 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 14 AND ("mentorships".mentee_id = 1) LIMIT 1
+Rendered users/_unmentor.html.erb (6.8ms)
+Rendered users/_mentor_form.html.erb (21.5ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (11.7ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/show.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 400ms (Views: 90.3ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:32:31 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"First Interest in Science", "age"=>"8", "content"=>"I became aware of science through an interest in birds and particularly bird behavior. Except in the peak of the summer or winter, I used to go most Sundays with my father to see what birds were around. The patterns of which birds were around and when were a direct result of the various migrations. That seems mysterious even today. ", "source"=>"http://achievement.org/autodoc/page/wat0int-1", "person_id"=>"14", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (29.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:32:31.338755', "perishable_token" = 'aWD0aSV18Qhd7Tdvv2Oe', "updated_at" = '2011-07-29 11:32:31.339473' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('I became aware of science through an interest in birds and particularly bird behavior. Except in the peak of the summer or winter, I used to go most Sundays with my father to see what birds were around. The patterns of which birds were around and when were a direct result of the various migrations. That seems mysterious even today. ', 14, '2011-07-29 11:32:31.492115', '2011-07-29 11:32:31.492115', 8, 'First Interest in Science', 'http://achievement.org/autodoc/page/wat0int-1', 1)[0m
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 14)) ORDER BY tags.name ASC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE ("categories".person_id = 14) ORDER BY categories.name ASC
+Redirected to http://localhost:3000/contribute?id=14
+Completed 302 Found in 806ms
+
+
+Started GET "/contribute?id=14" for 127.0.0.1 at 2011-07-29 07:32:32 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.7ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:32:32.411820', "perishable_token" = 'wewd5jsLqG9S37kElZI', "updated_at" = '2011-07-29 11:32:32.412675' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (8.7ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/contribute.html.erb within layouts/application (257.4ms)
+Completed 200 OK in 441ms (Views: 336.1ms | ActiveRecord: 34.7ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:35:12 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"Books Growing Up", "age"=>"10", "content"=>"The chief book I remember was The World Telegraph Almanac of Facts. I just went through and learned facts. We also had all of the classics in literature: Dostoyevsky, Turgenev, Tolstoy, English literature, Nineteenth century literature, some early 20th century. I read them all.", "source"=>"http://achievement.org/autodoc/page/wat0int-1", "person_id"=>"14", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:35:12.568663', "perishable_token" = 'p6RpboxuJdpRIJxlvrB', "updated_at" = '2011-07-29 11:35:12.569400' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('The chief book I remember was The World Telegraph Almanac of Facts. I just went through and learned facts. We also had all of the classics in literature: Dostoyevsky, Turgenev, Tolstoy, English literature, Nineteenth century literature, some early 20th century. I read them all.', 14, '2011-07-29 11:35:12.696328', '2011-07-29 11:35:12.696328', 10, 'Books Growing Up', 'http://achievement.org/autodoc/page/wat0int-1', 1)[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 14)) ORDER BY tags.name ASC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE ("categories".person_id = 14) ORDER BY categories.name ASC
+Redirected to http://localhost:3000/contribute?id=14
+Completed 302 Found in 737ms
+
+
+Started GET "/contribute?id=14" for 127.0.0.1 at 2011-07-29 07:35:13 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.8ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:35:13.510034', "perishable_token" = 'gel8rsiJLlKTpv62P3o', "updated_at" = '2011-07-29 11:35:13.510702' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered searches/_search_bar.html.erb (9.3ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered people/contribute.html.erb within layouts/application (242.9ms)
+Completed 200 OK in 352ms (Views: 248.3ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2011-07-29 07:38:14 -0400
+  Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "work"=>{"name"=>"Books in College", "age"=>"16", "content"=>"I went to college at the University of Chicago a bit early. I read there the novels of James Farrell and John Dos Passos, which tried to show what America was like in more or less the same way that Dickens had tried to convey about England - by looking through the lens of economics. Those were the days when you questioned whether capitalism was the moral way to live.", "source"=>"http://achievement.org/autodoc/page/wat0int-1", "person_id"=>"14", "contributor_id"=>"1"}, "commit"=>"Add Seed"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:38:14.417220', "perishable_token" = 'xolfVCOdaSDBVNCDeb4', "updated_at" = '2011-07-29 11:38:14.417880' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+WARNING: Can't mass-assign protected attributes: person_id
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "works" ("content", "person_id", "created_at", "updated_at", "age", "name", "source", "contributor_id") VALUES ('I went to college at the University of Chicago a bit early. I read there the novels of James Farrell and John Dos Passos, which tried to show what America was like in more or less the same way that Dickens had tried to convey about England - by looking through the lens of economics. Those were the days when you questioned whether capitalism was the moral way to live.', 14, '2011-07-29 11:38:14.538396', '2011-07-29 11:38:14.538396', 16, 'Books in College', 'http://achievement.org/autodoc/page/wat0int-1', 1)[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT DISTINCT "tags".* FROM "tags" INNER JOIN "works" ON "tags".work_id = "works".id WHERE (("works".person_id = 14)) ORDER BY tags.name ASC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE ("categories".person_id = 14) ORDER BY categories.name ASC
+Redirected to http://localhost:3000/contribute?id=14
+Completed 302 Found in 615ms
+
+
+Started GET "/contribute?id=14" for 127.0.0.1 at 2011-07-29 07:38:14 -0400
+  Processing by PeopleController#contribute as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-29 11:38:15.235334', "perishable_token" = '6cjYNPMtNWSdryFLnKWZ', "updated_at" = '2011-07-29 11:38:15.236059' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+WARNING: Can't mass-assign protected attributes: person_id
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (9.1ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered people/contribute.html.erb within layouts/application (261.0ms)
+Completed 200 OK in 368ms (Views: 268.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-29 07:38:18 -0400
+  Processing by PagesController#home as HTML
+ApplicationController::set_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-29 11:38:18.980569', "perishable_token" = '25XTgUAFOH4wkpPxKCSM', "updated_at" = '2011-07-29 11:38:18.981259' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[35mPerson Load (1.2ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mWork Load (0.4ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 13) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.2ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 11) ORDER BY works.age ASC
+  [1m[36mWork Load (0.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 14) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 10) ORDER BY works.age ASC
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 1) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 12) ORDER BY works.age ASC
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 13 LIMIT 1[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 11 LIMIT 1
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 14 LIMIT 1[0m
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 10 LIMIT 1
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 12 LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 13 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.4ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 14 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 14 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (0.2ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[35mMentorship Load (1.3ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 12 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (1.7ms)
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered searches/_search_bar.html.erb (8.7ms)
+ApplicationController::current_user
+Rendered users/_user_display.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (115.5ms)
+Completed 200 OK in 396ms (Views: 119.9ms | ActiveRecord: 8.5ms)
