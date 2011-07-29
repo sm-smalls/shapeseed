@@ -1,0 +1,110 @@
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/vendor/plugins/acts_as_indexed/rails/init.rb. (called from <top (required)> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/config/environment.rb:6)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/vendor/plugins/acts_as_indexed/rails/init.rb. (called from <top (required)> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/config/environment.rb:6)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-27 08:00:37 -0400
+  Processing by PagesController#home as HTML
+ApplicationController::set_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.6ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-27 12:00:38.974112', "perishable_token" = 'HHrc1h6VFxoyUBj8oI', "updated_at" = '2011-07-27 12:00:38.975036' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mWork Load (28.4ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 10) ORDER BY works.age ASC
+  [1m[36mWork Load (0.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".person_id = 11) ORDER BY works.age ASC[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".person_id = 1) ORDER BY works.age ASC
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 10 LIMIT 1[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = 11 LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.3ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 10 AND ("mentorships".mentee_id = 1) LIMIT 1
+ApplicationController::current_user
+ApplicationController::current_user
+  [1m[36mMentorship Load (0.4ms)[0m  [1mSELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1[0m
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT "mentorships".* FROM "mentorships" WHERE "mentorships"."mentor_id" = 11 AND ("mentorships".mentee_id = 1) LIMIT 1
+Rendered layouts/_stylesheets.html.erb (2.5ms)
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+ApplicationController::current_user
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered shared/_error_messages.html.erb (1.0ms)
+Rendered searches/_search_bar.html.erb (41.8ms)
+Rendered users/_user_display.html.erb (2.1ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (309.7ms)
+Completed 200 OK in 1834ms (Views: 364.8ms | ActiveRecord: 33.3ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-07-27 08:00:52 -0400
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "user_session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-07-27 12:00:53.184373', "perishable_token" = 'gPcuxtJmaTUwohIJpwkr', "updated_at" = '2011-07-27 12:00:53.184992' WHERE "users"."id" = 1[0m
+ApplicationController::current_user_session
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:55)
+Redirected to http://localhost:3000/user_sessions
+Completed 302 Found in 133ms
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-07-27 08:00:53 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+
+Rendered /Users/cinjonresnick/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-07-27 08:00:58 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+
+Rendered /Users/cinjonresnick/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-07-27 08:01:05 -0400
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEjccQFN62AL6hTFMeqNO8V8rqfZiKUV37X8U1YZJDA=", "user_session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/models/user.rb:19)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '7348009381bb626d4c345b16074b1b18789c739e5ab0917a490660e3f0712dfbe1c4b774b36cfcd040f86d3d5a1b1d7d4ed95c7d56f578e0a3ee32d41fb0dae6' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:15)
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2011-07-27 12:01:05.642820', "perishable_token" = 'rmmbjjXw0tEZH6NHKZV', "updated_at" = '2011-07-27 12:01:05.643561' WHERE "users"."id" = 1
+ApplicationController::current_user_session
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at /Users/cinjonresnick/Desktop/code/rorFolder/shapeseed/app/controllers/application_controller.rb:55)
+Redirected to http://localhost:3000/user_sessions
+Completed 302 Found in 124ms
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-07-27 08:01:05 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+
+Rendered /Users/cinjonresnick/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
